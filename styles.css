@@ -1,0 +1,264 @@
+*{/*always ndirha bach nn7i lmargin mn kaml elements*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --main-white:#f0f0f0;
+    --main-red:#be3144;
+    --main-blue:#45567d;
+    --main-grey:#303841;
+}
+/*start header */
+#navbar{
+    background-color: var(--main-red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100% ;
+    height: 4rem;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:10;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0 2rem;
+}
+.logo img{
+    width: 300px;
+}
+#navbar ul li a {
+    text-decoration:none;
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.84rem 2rem;
+    color: var(--main-white);
+}
+#navbar ul li:hover{
+    background-color: var(--main-blue);
+}
+@media (max-width:850px){
+    .logo img{
+        display: none;
+    }
+    #navbar{
+        justify-content: center;
+    }
+}
+@media(max-width:470px){
+    #navbar ul li a {
+        font-size: 1.2rem; 
+    }
+}
+@media(max-width:330px){
+    #navbar ul li a {
+        font-size: 1rem; 
+        padding:0 1.5rem;
+    }
+}
+/*start welcom section */
+#welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: var(--main-white);
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+#welcome-section h1{
+    line-height: 1;
+    font-size: 3rem;
+    font-weight: 700;
+}
+#welcome-section p{
+    font-weight: 200;
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--main-red);
+}
+@media (max-width:430px){
+    #welcome-section h1{
+        font-size: 2.3rem;
+    }
+}
+@media (max-width:305px){
+    #welcome-section h1{
+        font-size: 2rem;
+    }
+    #welcome-section p{
+        font-size: 1.5rem;
+    }
+}
+/*start projects section */
+#projects{
+    background-color: var(--main-blue);
+    height:auto ;
+    min-height: 120vh;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--main-white);
+}
+#projects h2{
+    font-size: 2rem;
+    font-weight: 600;
+    max-width: 640px;
+    margin: 0 auto 3rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+}
+#projects .content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#projects .content a{
+    text-decoration: none;
+    color: var(--main-white);
+    width: 32%;
+    margin-top: 22px;
+}
+.project-tile{
+    background: var(--main-grey);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+.project-tile img{
+    height: 250px; /* You can adjust the height value as per your preference */
+    width: 100%;
+    object-fit: cover;
+}
+@media(max-width:730px){
+    .project-tile img{
+        height: calc(100% - 6.8rem);
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.project-tile p{
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    font-weight: 500;
+}
+img{
+    display: block;
+    width: 100%;
+}
+.code{
+    color: var(--main-grey);
+    transition: 0.3s;
+}
+.content .project-tile:hover .code{
+    color: var(--main-red);
+}
+@media(max-width:1095px){
+    #projects .content a{
+        width: 49%;
+    }
+}
+@media(max-width:730px){
+    #projects .content a{
+        width: 100%;
+    }
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+button{
+    background-color: var(--main-grey);
+    color: var(--main-white);
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px 20px;
+    font-size: 1.4rem !important;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+button i{
+    transition: 0.5s;
+}
+button:hover{
+    background-color: var(--main-red);
+}
+button:hover i{
+    transform: translateX(5px);
+}
+/*start contact section*/
+#contact{
+    background-color: var(--main-grey);
+    color: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    padding: 0 2rem;
+}
+.contact-header{
+    line-height: 1.4;
+}
+.contact-header h2{
+    font-size: 3rem;
+}
+.contact-header > p{
+    font-style: italic;
+}
+@media (max-width:460px){
+    .contact-header h2{
+        font-size: 2rem;
+    }
+}
+.contact-links {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    flex-wrap: wrap;
+    
+}
+.media-btn{
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition:  0.3s ease-out;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    color: var(--main-white);
+    cursor: pointer;
+}
+.media-btn i{
+    transition: 0.5s;
+}
+.media-btn:hover i{
+    transform: translateY(8px);
+}
+/*start footer*/
+footer{
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background-color: var(--main-grey);
+    border-top: 4px solid var(--main-red);
+    color: var(--main-white);
+}
+footer p{
+    margin: 2rem;
+    font-size: 1.1rem;
+}
